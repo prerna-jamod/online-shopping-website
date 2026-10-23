@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+}
+
+.New-container {
+  width: 100%;
+  max-width: 1300px;
+  min-height: auto;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.text-containerr {
+  width: 100%;
+  max-width: 650px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.NewA-text {
+  width: 250px;
+  max-width: 80%;
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.NewA-text:hover {
+  transform: scale(1.08) translateY(-4px);
+  filter: brightness(0.85);
+}
+
+.paragraph {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 30px auto 0;
+  padding: 0 10px;
+
+  color: rgba(138, 138, 138, 1);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.paragraph p {
+  margin: 0;
+}
+
+.paragraph:hover {
+  color: #555;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   CATEGORY SECTION
+========================= */
+
+.fashion-container {
+  width: 100%;
+  max-width: 1070px;
+
+  margin: 40px auto 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+}
+
+.fashion-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.menFasion,
+.womenFashion,
+.womenAccessories,
+.menAccessories,
+.discount-Deals {
+  flex: 0 0 200px;
+
+  width: 200px;
+  height: 56px;
+
+  border-radius: 10px;
+
+  background-color: rgba(250, 250, 250, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* CATEGORY TEXT */
+
+.men-dress,
+.women-dress,
+.women-jwelery,
+.men-jwelery,
+.discount {
+  margin: 0;
+
+  color: rgba(138, 138, 138, 1);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  transition: color 0.3s ease;
+}
+
+/* ACTIVE CATEGORY */
+
+.womenFashion {
+  background-color: #000;
+}
+
+.women-dress {
+  color: #fff;
+}
+
+/* CATEGORY HOVER */
+
+.menFasion:hover,
+.womenFashion:hover,
+.womenAccessories:hover,
+.menAccessories:hover,
+.discount-Deals:hover {
+  background-color: #000;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menFasion:hover .men-dress,
+.womenFashion:hover .women-dress,
+.womenAccessories:hover .women-jwelery,
+.menAccessories:hover .men-jwelery,
+.discount-Deals:hover .discount {
+  color: #fff;
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product-new {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 20px auto 0;
+
+  height: auto;
+}
+
+/* =========================
+   VIEW MORE
+========================= */
+
+.view-container {
+  width: 180px;
+  max-width: 100%;
+
+  height: 52px;
+
+  margin: 30px auto 0;
+
+  border-radius: 10px;
+
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.view-text {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  color: #fff;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.view-container:hover {
+  background-color: #fff;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.view-container:hover .view-text {
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1200px) {
+  .New-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .text-containerr {
+    margin-top: 30px;
+  }
+
+  .NewA-text {
+    width: 260px;
+  }
+
+  .paragraph {
+    max-width: 600px;
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1199px) {
+  .New-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .text-containerr {
+    margin-top: 110px;
+  }
+
+  .NewA-text {
+    width: 240px;
+  }
+
+  .paragraph {
+    max-width: 550px;
+  }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .New-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .text-containerr {
+    margin-top: 80px;
+  }
+
+  .NewA-text {
+    width: 220px;
+  }
+
+  .paragraph {
+    max-width: 500px;
+
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .fashion-container {
+    margin-top: 30px;
+
+    gap: 12px;
+  }
+
+  .menFasion,
+  .womenFashion,
+  .womenAccessories,
+  .menAccessories,
+  .discount-Deals {
+    flex: 0 0 180px;
+
+    width: 180px;
+    height: 52px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+  .New-container {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 10px 40px;
+
+    overflow-x: hidden;
+  }
+
+  /* HEADING */
+
+  .text-containerr {
+    width: 100%;
+
+    margin-top: 60px;
+  }
+
+  .NewA-text {
+    width: 200px;
+
+    max-width: 85%;
+  }
+
+  /* PARAGRAPH */
+
+  .paragraph {
+    width: 100%;
+
+    max-width: 360px;
+
+    margin-top: 22px;
+
+    padding: 0 5px;
+
+    font-size: 12px;
+
+    line-height: 18px;
+  }
+
+  /* CATEGORY */
+
+  .fashion-container {
+    width: 100%;
+
+    margin-top: 25px;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    justify-content: flex-start;
+  }
+
+  .menFasion,
+  .womenFashion,
+  .womenAccessories,
+  .menAccessories,
+  .discount-Deals {
+    flex: 0 0 145px;
+
+    width: 145px;
+
+    height: 46px;
+
+    font-size: 11px;
+  }
+
+  /* PRODUCTS */
+
+  .product-new {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin-top: 10px;
+  }
+
+  /* VIEW MORE */
+
+  .view-container {
+    width: 150px;
+
+    height: 46px;
+
+    margin-top: 25px;
+  }
+
+  .view-text {
+    font-size: 12px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .New-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .text-containerr {
+    margin-top: 45px;
+  }
+
+  .NewA-text {
+    width: 180px;
+
+    max-width: 80%;
+  }
+
+  .paragraph {
+    max-width: 330px;
+
+    font-size: 11px;
+
+    line-height: 17px;
+  }
+
+  .fashion-container {
+    margin-top: 22px;
+
+    gap: 7px;
+  }
+
+  .menFasion,
+  .womenFashion,
+  .womenAccessories,
+  .menAccessories,
+  .discount-Deals {
+    flex: 0 0 130px;
+
+    width: 130px;
+
+    height: 44px;
+
+    font-size: 10px;
+  }
+
+  .product-new {
+    width: 100%;
+
+    margin-top: 8px;
+  }
+
+  .view-container {
+    width: 140px;
+
+    height: 44px;
+  }
+}
+
+/* =====================================================
+   iPHONE XR / SMALL PHONES
+===================================================== */
+
+@media (max-width: 414px) {
+  .New-container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .text-containerr {
+    margin-top: 40px;
+  }
+
+  .NewA-text {
+    width: 165px;
+  }
+
+  .paragraph {
+    width: 100%;
+
+    max-width: 310px;
+
+    padding: 0 3px;
+
+    font-size: 10.5px;
+
+    line-height: 16px;
+  }
+
+  .fashion-container {
+    width: 100%;
+
+    margin-top: 20px;
+
+    gap: 6px;
+  }
+
+  .menFasion,
+  .womenFashion,
+  .womenAccessories,
+  .menAccessories,
+  .discount-Deals {
+    flex: 0 0 120px;
+
+    width: 120px;
+
+    height: 42px;
+
+    font-size: 9.5px;
+  }
+
+  .product-new {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+  .view-container {
+    width: 135px;
+
+    height: 42px;
+  }
+
+  .view-text {
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
+
+@media (max-width: 360px) {
+  .New-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .text-containerr {
+    margin-top: 35px;
+  }
+
+  .NewA-text {
+    width: 150px;
+  }
+
+  .paragraph {
+    max-width: 290px;
+
+    font-size: 10px;
+
+    line-height: 15px;
+  }
+
+  .fashion-container {
+    gap: 5px;
+  }
+
+  .menFasion,
+  .womenFashion,
+  .womenAccessories,
+  .menAccessories,
+  .discount-Deals {
+    flex: 0 0 115px;
+
+    width: 115px;
+
+    height: 40px;
+
+    font-size: 9px;
+  }
+
+  .view-container {
+    width: 130px;
+
+    height: 40px;
+  }
+}

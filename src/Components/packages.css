@@ -1,0 +1,889 @@
+.package-container {
+  width: 90%;
+  max-width: 1920px;
+  min-height: 570px;
+  margin: 50px auto 50px; /* reduced from 200px */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.Img-container {
+  width: 50%;
+  min-height: 570px;
+
+  background: rgba(248, 248, 248, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.package-Image {
+  width: min(722px, 100%);
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  margin: 0;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+.Img-container:hover .package-Image {
+  transform: scale(1.06);
+  filter: brightness(1.04);
+}
+
+/* =========================
+   TEXT CONTAINER
+========================= */
+
+.package-text {
+  width: 50%;
+  min-height: 570px;
+
+  background: rgba(218, 218, 218, 1);
+
+  /*
+    Fixed 15% padding hata diya.
+    Isse different browser widths par
+    content unnecessarily squeeze nahi hoga.
+  */
+  padding: 50px clamp(30px, 7vw, 150px);
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: background 0.4s ease;
+}
+
+/* =========================
+   WOMEN COLLECTION
+========================= */
+
+.women-text {
+  width: auto;
+  height: auto;
+
+  margin: 0 0 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  font-size: 12px;
+  line-height: 100%;
+
+  color: rgba(118, 118, 118, 1);
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease,
+    transform 0.3s ease;
+}
+
+.women-text:hover {
+  color: #000;
+  letter-spacing: 1px;
+  transform: translateX(4px);
+}
+
+/* =========================
+   PEAKY LOGO
+========================= */
+
+.Peaky-logo {
+  width: fit-content;
+
+  margin: 0 0 25px;
+
+  font-family: "Volkhov", serif;
+
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: rgba(72, 72, 72, 1);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s ease,
+    letter-spacing 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.Peaky-logo:hover {
+  transform: translateX(8px);
+  letter-spacing: 1.5px;
+
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+  width: fit-content;
+  height: auto;
+
+  margin: 0 0 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  font-size: 12px;
+  line-height: 100%;
+
+  color: rgba(0, 0, 0, 1);
+
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  transition:
+    letter-spacing 0.3s ease,
+    transform 0.3s ease;
+}
+
+.description:hover {
+  letter-spacing: 1px;
+  transform: translateX(4px);
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.parah-package {
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+
+  margin: 0 0 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  font-size: 12px;
+  line-height: 150%;
+
+  color: rgba(118, 118, 118, 1);
+
+  transition: color 0.3s ease;
+}
+
+.parah-package:hover {
+  color: #333;
+}
+
+/* =========================
+   SIZE
+========================= */
+
+.small-box {
+  width: 200px;
+  height: 35px;
+
+  margin: 0 0 15px;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.size-text {
+  width: 34px;
+  height: 15px;
+
+  margin: 10px;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 100%;
+
+  color: rgba(118, 118, 118, 1);
+
+  transition: color 0.3s ease;
+}
+
+.small-box:hover .size-text {
+  color: #000;
+}
+
+/* =========================
+   SIZE M
+========================= */
+
+.m-text {
+  width: 50px;
+  height: 28px;
+
+  margin: 0;
+
+  border-radius: 10px;
+
+  background-color: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.m-text:hover {
+  background-color: #fff;
+  color: #000;
+
+  border: 1px solid #000;
+
+  transform: scale(1.1);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.h5-text {
+  width: auto;
+  height: 30px;
+
+  margin: 0 0 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  font-size: clamp(23px, 2.2vw, 28px);
+  line-height: 100%;
+
+  color: rgba(0, 0, 0, 1);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.h5-text:hover {
+  transform: translateX(5px);
+  letter-spacing: 1px;
+}
+
+/* =========================
+   BUY NOW
+========================= */
+
+.buynow-btn {
+  width: 207px;
+  min-height: 56px;
+
+  margin: 0;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+
+  background: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+}
+
+.buynow-btn:hover {
+  background: #fff;
+  color: #000;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  letter-spacing: 0.5px;
+}
+
+.buynow-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.icons {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+}
+
+.feature-box {
+  width: 100%;
+  min-width: 0;
+
+  height: 56px;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  transition: transform 0.35s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   FEATURE ICON
+========================= */
+
+.feature-icon {
+  width: 51px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 38px;
+  height: 38px;
+
+  stroke-width: 1.5;
+
+  color: #111;
+
+  transition:
+    transform 0.35s ease,
+    stroke-width 0.3s ease;
+}
+
+.feature-box:hover .feature-icon svg {
+  transform: scale(1.15);
+  stroke-width: 2;
+}
+
+/* =========================
+   FEATURE TEXT
+========================= */
+
+.feature-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-text h3 {
+  margin: 0 0 4px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #111;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.feature-box:hover .feature-text h3 {
+  color: #000;
+  letter-spacing: 0.3px;
+}
+
+.feature-text p {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  color: #666;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.feature-box:hover .feature-text p {
+  color: #222;
+}
+
+/* =========================================================
+   1400px
+========================================================= */
+
+@media (max-width: 1400px) {
+  .package-container {
+    width: 92%;
+    margin: 45px auto 40px;
+  }
+
+  .package-text {
+    padding-left: clamp(30px, 6vw, 80px);
+    padding-right: clamp(25px, 5vw, 70px);
+  }
+
+  .package-Image {
+    width: 75%;
+  }
+
+  .icons {
+    width: 92%;
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .package-container {
+    width: 94%;
+    margin: 40px auto 35px;
+    min-height: 500px;
+  }
+
+  .Img-container {
+    min-height: 500px;
+  }
+
+  .package-text {
+    min-height: 500px;
+
+    padding: 40px 5%;
+  }
+
+  .package-Image {
+    width: 80%;
+  }
+
+  .Peaky-logo {
+    font-size: 36px;
+  }
+
+  .parah-package {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .h5-text {
+    font-size: 24px;
+  }
+
+  .buynow-btn {
+    width: 180px;
+    min-height: 50px;
+  }
+
+  .icons {
+    height: auto;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    padding: 40px 20px;
+  }
+
+  .feature-box {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .package-container {
+    width: 92%;
+
+    margin: 30px auto 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  /* IMAGE */
+
+  .Img-container {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .package-Image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* TEXT */
+
+  .package-text {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 30px;
+  }
+
+  .women-text {
+    font-size: 12px;
+  }
+
+  .Peaky-logo {
+    font-size: 34px;
+    margin-bottom: 22px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .parah-package {
+    width: 100%;
+    max-width: none;
+
+    font-size: 12px;
+    line-height: 170%;
+  }
+
+  .small-box {
+    margin-bottom: 15px;
+  }
+
+  .h5-text {
+    font-size: 25px;
+  }
+
+  .buynow-btn {
+    width: 190px;
+    height: 52px;
+  }
+
+  /* FEATURES */
+
+  .icons {
+    width: 90%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px 15px;
+
+    padding: 30px 0;
+  }
+
+  .feature-box {
+    justify-content: flex-start;
+  }
+
+  .feature-icon {
+    width: 42px;
+  }
+
+  .feature-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .feature-text h3 {
+    font-size: 12px;
+  }
+
+  .feature-text p {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .package-container {
+    width: 94%;
+    margin: 25px auto 25px;
+  }
+
+  .Img-container {
+    padding: 20px 10px;
+  }
+
+  .package-Image {
+    width: 90%;
+  }
+
+  .package-text {
+    padding: 35px 25px;
+  }
+
+  .Peaky-logo {
+    font-size: 30px;
+  }
+
+  .parah-package {
+    font-size: 11px;
+    line-height: 165%;
+  }
+
+  .icons {
+    width: 92%;
+    gap: 25px 12px;
+  }
+
+  .feature-text h3 {
+    font-size: 11px;
+  }
+
+  .feature-text p {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .package-container {
+    width: 94%;
+    margin: 20px auto 25px;
+  }
+
+  .Img-container {
+    padding: 20px 0;
+  }
+
+  .package-Image {
+    width: 90%;
+  }
+
+  .package-text {
+    padding: 30px 20px;
+  }
+
+  .women-text {
+    font-size: 11px;
+  }
+
+  .Peaky-logo {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  .parah-package {
+    font-size: 11px;
+    line-height: 160%;
+  }
+
+  .size-text {
+    font-size: 14px;
+  }
+
+  .m-text {
+    width: 45px;
+    height: 26px;
+  }
+
+  .h5-text {
+    font-size: 23px;
+  }
+
+  .buynow-btn {
+    width: 170px;
+    height: 48px;
+
+    font-size: 14px;
+  }
+
+  /* MOBILE FEATURES */
+
+  .icons {
+    width: 85%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 30px 0;
+  }
+
+  .feature-box {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    padding-left: 10px;
+
+    box-sizing: border-box;
+  }
+
+  .feature-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .feature-text h3 {
+    font-size: 12px;
+  }
+
+  .feature-text p {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .package-container {
+    width: 96%;
+    margin-top: 40px;
+  }
+
+  .Img-container {
+    padding: 15px 0;
+  }
+
+  .package-Image {
+    width: 94%;
+  }
+
+  .package-text {
+    padding: 25px 15px;
+  }
+
+  .women-text {
+    font-size: 10px;
+  }
+
+  .Peaky-logo {
+    font-size: 25px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .parah-package {
+    font-size: 10px;
+  }
+
+  .small-box {
+    width: 160px;
+    gap: 8px;
+  }
+
+  .size-text {
+    font-size: 13px;
+  }
+
+  .buynow-btn {
+    width: 155px;
+    min-height: 46px;
+  }
+
+  .icons {
+    width: 90%;
+  }
+
+  .feature-box {
+    padding-left: 5px;
+  }
+
+  .feature-icon {
+    width: 38px;
+  }
+
+  .feature-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-text h3 {
+    font-size: 11px;
+  }
+
+  .feature-text p {
+    font-size: 7px;
+  }
+}
